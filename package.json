@@ -1,7 +1,7 @@
 {
   "name": "status-check-slackbot",
   "version": "1.0.0",
-  "description": "Share GitHub status checks with a Slack channel.",
+  "description": "Share failing GitHub status checks with a Slack channel.",
   "main": "./dist/index.js",
   "dependencies": {
     "@octokit/webhooks": "^7.11.2"
