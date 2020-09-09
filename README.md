@@ -6,6 +6,26 @@ This is a Slackbot designed to share failing GitHub status checks with a Slack c
 | --- |
 | Example of a Slack message generated on a failure. |
 
+## Installation
+
+It's recommended to use the [Docker image](https://hub.docker.com/r/flotwig/status-check-slackbot).
+
+Example `docker-compose.yml`:
+
+```yml
+version: '3.0'
+
+services:
+  status-check-slackbot:
+    image: flotwig/status-check-slackbot:latest
+    restart: always
+    environment:
+      - SLACK_WEBHOOK_URL=https://your-slack-webhook-url
+      - SECRET=your-github-webhook-secret
+    ports:
+      - 3000:3000
+```
+
 ## Configuration
 
 Configuration takes place via environment variables:
