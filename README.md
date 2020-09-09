@@ -37,3 +37,11 @@ Configuration takes place via environment variables:
 * `PORT` (default: `3000`) - Port to listen for HTTP requests on.
 
 Once the service is running, configure a GitHub webhook to send `status` payloads to it, using `application/json` encoding and the `SECRET` you configured earlier.
+
+## Contributing
+
+To install dependencies, run `npm install`.
+
+To build the `.js` files in `dist`, run `npm run build`.
+
+To start the server, run `npm run start`.
