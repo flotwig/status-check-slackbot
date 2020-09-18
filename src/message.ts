@@ -1,7 +1,7 @@
 import { EventPayloads } from '@octokit/webhooks'
 
 export function formatMessage(payload: EventPayloads.WebhookPayloadStatus) {
-  const { sender, commit, target_url, description, state, repository, branches, context } = payload
+  const { commit, target_url, description, state, repository, branches, context } = payload
 
   // @ts-ignore
   const avatar_url = payload.avatar_url
