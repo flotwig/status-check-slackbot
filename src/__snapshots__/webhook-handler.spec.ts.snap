@@ -5,41 +5,19 @@ Object {
   "blocks": Array [
     Object {
       "text": Object {
-        "text": ":x: A status check has failed in \`master\`!
-
-*Commit message*: commit message",
+        "text": ":x: Status checks have failed in \`master\`!
+*Commit*: <https://github.com/owner/repo/commit/1234567890abcdef1234567890|\`1234567890abcdef1234567890\`...>
+*Commit message*: commit message
+Failing jobs:
+• <https://url-to-job|first failure> (job description) (failure)
+• <https://url-to-job|second failure> (job description) (failure)
+• <https://url-to-job|final failure> (job description) (failure)",
         "type": "mrkdwn",
       },
       "type": "section",
     },
     Object {
-      "fields": Array [
-        Object {
-          "text": "*Job*: <https://url-to-job|job context>",
-          "type": "mrkdwn",
-        },
-        Object {
-          "text": "*Message*: <https://url-to-job|job description>",
-          "type": "mrkdwn",
-        },
-        Object {
-          "text": "*State*: \`failure\`",
-          "type": "mrkdwn",
-        },
-        Object {
-          "text": "*Commit*: <https://github.com/owner/repo/commit/1234567890abcdef1234567890|\`1234567890abcdef\`...> ",
-          "type": "mrkdwn",
-        },
-      ],
-      "type": "section",
-    },
-    Object {
       "elements": Array [
-        Object {
-          "alt_text": "Status Check Avatar",
-          "image_url": "https://avatar-url",
-          "type": "image",
-        },
         Object {
           "alt_text": "Author Avatar",
           "image_url": "https://author-avatar-url",

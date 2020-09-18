@@ -4,6 +4,7 @@ export type Config = {
   slackWebhookUrl: string
   targetBranches: string[]
   states: string[]
+  rollupMs: number
 }
 
 const ensureEnvVar = (name: string): string => {
@@ -18,6 +19,7 @@ const ensureEnvVar = (name: string): string => {
 
 export const config: Config = {
   port: Number(process.env.PORT) || 3000,
+  rollupMs: Number(process.env.ROLLUP_MS) || 10 * 60 * 1000,
   secret: ensureEnvVar('SECRET'),
   slackWebhookUrl: ensureEnvVar('SLACK_WEBHOOK_URL'),
   targetBranches: (process.env.TARGET_BRANCHES || 'master').split(','),
