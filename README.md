@@ -2,9 +2,9 @@
 
 This is a Slackbot designed to share failing GitHub status checks with a Slack channel.
 
-| ![Example of the Slack message.](https://i.imgur.com/iuiByxX.png) |
+| ![Example of the Slack message.](https://i.imgur.com/SkeAbwq.png) |
 | --- |
-| Example of a Slack message generated on a failure. |
+| Example of a Slack message generated on a failure. Multiple failures on a single commit are rolled up into one message. |
 
 ## Installation
 
@@ -32,6 +32,7 @@ Configuration takes place via environment variables:
 
 * `SLACK_WEBHOOK_URL` (required) - Slack Incoming Webhook URL to use for this bot.
 * `SECRET` (required) - GitHub webhook secret, created when you set up the GitHub `status` webhook.
+* `ROLLUP_MS` (default: 10 minutes) - Number of milliseconds to wait to post the Slack message, since the last failure. Multiple failures within this interval will be consolidated into a single Slack message, and the window is reset on every new failure.
 * `TARGET_BRANCHES` (default: `master`) - Only failures from these branches will be reported to slack. Comma-separated.
 * `STATES` (default: `failure,error`) - Comma-separated list of states to consider "failures".
 * `PORT` (default: `3000`) - Port to listen for HTTP requests on.
