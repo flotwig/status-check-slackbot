@@ -8,7 +8,7 @@ Object {
         "text": ":x: Status checks have failed in \`master\`!
 *Commit*: <https://github.com/owner/repo/commit/1234567890abcdef1234567890|\`1234567890abcdef1234567890\`...>
 *Commit message*: commit message
-Failing jobs:
+*Failing jobs*:
 • <https://url-to-job|first failure> (job description) (failure)
 • <https://url-to-job|second failure> (job description) (failure)
 • <https://url-to-job|final failure> (job description) (failure)",

@@ -15,7 +15,7 @@ export function formatMessage(payloads: EventPayloads.WebhookPayloadStatus[]) {
         "type": "section",
         "text": {
           "type": "mrkdwn",
-          "text": `:x: Status checks have failed in \`${branches.map(branch => branch.name).join(', ')}\`!\n*Commit*: <https://github.com/${repository.full_name}/commit/${commit.sha}|\`${commit.sha}\`...>\n*Commit message*: ${commit.commit.message}\nFailing jobs:\n${failuresMd}`
+          "text": `:x: Status checks have failed in \`${branches.map(branch => branch.name).join(', ')}\`!\n*Commit*: <https://github.com/${repository.full_name}/commit/${commit.sha}|\`${commit.sha}\`...>\n*Commit message*: ${commit.commit.message}\n*Failing jobs*:\n${failuresMd}`
         }
       },
       {
